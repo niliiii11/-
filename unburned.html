@@ -1,0 +1,368 @@
+<div class="wrapper">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter, sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 1000;
+    background: #102F43;
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    height: 180%;
+    padding: 20px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    position: relative;
+    width: 325px;
+    height: 450px;
+    background: #000;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    width: calc(33.33% - 15px);
+}
+
+.poster {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.poster::before {
+    content: '';
+    position: absolute;
+    bottom: -45%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: .3s;
+}
+
+.card:hover .poster::before {
+    bottom: 0;
+}
+
+.poster img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .3s;
+}
+
+.card:hover .poster img {
+    transform: scale(1.1);
+}
+
+.details {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    padding: 1.5em 1.5em 2em;
+    background: #000a;
+    backdrop-filter: blur(16px) saturate(120%);
+    transition: .3s;
+    color: #fff;
+    z-index: 2;
+}
+
+.card:hover .details {
+    bottom: 0;
+}
+
+.details h1,
+.details h2 {
+    font-weight: 700;
+}
+
+.details h1 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.details h2 {
+    font-weight: 400;
+    font-size: 1em;
+    margin-bottom: 10px;
+    opacity: .6;
+}
+
+.details .rating {
+    position: relative;
+    margin-bottom: 15px;
+    display: flex;
+    gap: .25em;
+}
+
+.details .rating i {
+    color: #e3c414;
+}
+
+.details .rating span {
+    margin-left: 0.25em;
+}
+
+.details .tags {
+    display: flex;
+    gap: .375em;
+    margin-bottom: .875em;
+    font-size: .85em;
+}
+
+.details .tags span {
+    padding: .35rem .65rem;
+    color: #fff;
+    border: 2px solid #EEE2D3;
+    border-radius: 4px;
+    border-radius: 50px;
+}
+
+.details .desc {
+    color: #fff;
+    opacity: .8;
+    line-height: 1.5;
+    margin-bottom: 1em;
+}
+
+.details .cast h3 {
+    margin-bottom: .5em;
+}
+
+.details .cast ul {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.625rem;
+    width: 100%;
+}
+
+.details .cast ul li {
+    list-style: none;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1.5px solid #fff;
+}
+
+.details .cast ul li img {
+    width: 100%;
+    height: 100%;
+}
+    </style>
+	<div class="card">
+		<div class="poster"><img src="https://i.postimg.cc/hvg1Sq46/10001.jpg
+            " alt="Location Unknown"></div>
+		<div class="details">
+			<h1>Inside Flare – Orange Ammo Smoke</h1>
+			<h2>Dissecting traditions，2015</h2>
+            <p class="desc">
+				Andrew Waits
+			<div class="tags">
+				<span class="tag">Circle</span>
+				<span class="tag">Orange</span>
+				<span class="tag">Inside</span>
+			</div>
+			
+			<div class="cast">
+				<h3>Photographer</h3>
+				<ul>
+					<li><img src="https://i.postimg.cc/SR7c7HZW/455.png" alt="Marco Andrews" title="Marco Andrews"></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+    <div class="card">
+		<div class="poster"><img src="https://i.postimg.cc/d3Bm3SL1/10002.jpg
+            " alt="Location Unknown"></div>
+		<div class="details">
+			<h1>Ground Bloom Flower Firework</h1>
+			<h2>Dissecting traditions，2015</h2>
+            <p class="desc">
+				Andrew Waits
+			<div class="tags">
+				<span class="tag">Cylinder</span>
+				<span class="tag">Flower</span>
+			</div>
+			
+			<div class="cast">
+				<h3>Photographer</h3>
+				<ul>
+					<li><img src="https://i.postimg.cc/SR7c7HZW/455.png" alt="Marco Andrews" title="Marco Andrews"></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+    <div class="card">
+		<div class="poster"><img src="https://i.postimg.cc/YCS8GkNw/10003.jpg
+            " alt="Location Unknown"></div>
+		<div class="details">
+			<h1>Flying Color Butterflies Rocket</h1>
+			<h2>Dissecting traditions，2015</h2>
+            <p class="desc">
+				Andrew Waits
+			<div class="tags">
+				<span class="tag">Cylinder</span>
+				<span class="tag">Butterflies</span>
+			</div>
+			
+			<div class="cast">
+				<h3>Photographer</h3>
+				<ul>
+					<li><img src="https://i.postimg.cc/SR7c7HZW/455.png" alt="Marco Andrews" title="Marco Andrews"></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+    <div class="card">
+		<div class="poster"><img src="https://i.postimg.cc/SscGFK4c/10004.jpg
+            " alt="Location Unknown"></div>
+		<div class="details">
+			<h1>Inside Firecracker</h1>
+			<h2>Dissecting traditions，2015</h2>
+            <p class="desc">
+				Andrew Waits
+			<div class="tags">
+				<span class="tag">Cylinder</span>
+				<span class="tag">Inside</span>
+			</div>
+			
+			<div class="cast">
+				<h3>Photographer</h3>
+				<ul>
+					<li><img src="https://i.postimg.cc/SR7c7HZW/455.png" alt="Marco Andrews" title="Marco Andrews"></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="card">
+		<div class="poster"><img src="https://i.postimg.cc/JhfQ2kf1/10005.jpg
+            " alt="Location Unknown"></div>
+		<div class="details">
+			<h1>Pop Pop Cracker</h1>
+			<h2>Dissecting traditions，2015</h2>
+            <p class="desc">
+				Andrew Waits
+			<div class="tags">
+				<span class="tag">Pop</span>
+				<span class="tag">Ball</span>
+			</div>
+			
+			<div class="cast">
+				<h3>Photographer</h3>
+				<ul>
+					<li><img src="https://i.postimg.cc/SR7c7HZW/455.png" alt="Marco Andrews" title="Marco Andrews"></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+    <div class="card">
+		<div class="poster"><img src="https://i.postimg.cc/YqRbCjW3/10006.jpg
+            " alt="Location Unknown"></div>
+		<div class="details">
+			<h1>Moon Travelers Bottle Rocket</h1>
+			<h2>Dissecting traditions，2015</h2>
+            <p class="desc">
+				Andrew Waits
+			<div class="tags">
+				<span class="tag">Rocket</span>
+			</div>
+			
+			<div class="cast">
+				<h3>Photographer</h3>
+				<ul>
+					<li><img src="https://i.postimg.cc/SR7c7HZW/455.png" alt="Marco Andrews" title="Marco Andrews"></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="card">
+		<div class="poster"><img src="https://i.postimg.cc/VkHgXT40/10007.jpg
+            " alt="Location Unknown"></div>
+		<div class="details">
+			<h1>World Class Clay Color Smoke Balls</h1>
+			<h2>Dissecting traditions，2015</h2>
+            <p class="desc">
+				Andrew Waits
+			<div class="tags">
+				<span class="tag">Cylinder</span>
+                <span class="tag">Clay color</span>
+			</div>
+			
+			<div class="cast">
+				<h3>Photographer</h3>
+				<ul>
+					<li><img src="https://i.postimg.cc/SR7c7HZW/455.png" alt="Marco Andrews" title="Marco Andrews"></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+    <div class="card">
+		<div class="poster"><img src="https://i.postimg.cc/s2Qcmc06/10008.jpg
+            " alt="Location Unknown"></div>
+		<div class="details">
+			<h1>Blue Thunder Roman Candle</h1>
+			<h2>Dissecting traditions，2015</h2>
+            <p class="desc">
+				Andrew Waits
+			<div class="tags">
+				<span class="tag">Blue</span>
+                <span class="tag">Cylinder</span>
+			</div>
+			
+			<div class="cast">
+				<h3>Photographer</h3>
+				<ul>
+					<li><img src="https://i.postimg.cc/SR7c7HZW/455.png" alt="Marco Andrews" title="Marco Andrews"></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="card">
+		<div class="poster"><img src="https://i.postimg.cc/G3JjX9qC/10009.jpg
+            " alt="Location Unknown"></div>
+		<div class="details">
+			<h1>Lightning Flash Firecracker Inside</h1>
+			<h2>Dissecting traditions，2015</h2>
+            <p class="desc">
+				Andrew Waits
+			<div class="tags">
+				<span class="tag">Flash</span>
+                <span class="tag">Inside</span>
+			</div>
+			
+			<div class="cast">
+				<h3>Photographer</h3>
+				<ul>
+					<li><img src="https://i.postimg.cc/SR7c7HZW/455.png" alt="Marco Andrews" title="Marco Andrews"></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

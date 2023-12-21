@@ -1,0 +1,970 @@
+
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+</head>
+<body style="height: 100%; margin: 0">
+  <div id="container" style="height: 100%"></div>
+
+  
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts/5.4.3/files/dist/echarts.min.js"></script>
+  <!-- Uncomment this line if you want to dataTool extension
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts/5.4.3/files/dist/extension/dataTool.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use gl extension
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts-gl/2/files/dist/echarts-gl.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-stat extension
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts-stat/latest/files/dist/ecStat.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use map
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts/4.9.0/files/map/js/china.js"></script>
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts/4.9.0/files/map/js/world.js"></script>
+  -->
+  <!-- Uncomment these two lines if you want to use bmap extension
+  <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=YOUR_API_KEY"></script>
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts/5.4.3/files/dist/extension/bmap.min.js"></script>
+  -->
+
+  <script type="text/javascript">
+    var dom = document.getElementById('container');
+    var myChart = echarts.init(dom, 'dark', {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+    
+    var option;
+
+    var data = [
+  {
+    name: '装置 行为',
+    itemStyle: {
+      color: '#F3E0B6'
+    },
+    children: [
+      {
+        name: '1989',
+        itemStyle: {
+          color: '#9591ED'
+        },
+        children: [
+          {
+            name: '人类的家：为外星人作的计划第一号',
+            value: 1,
+            itemStyle: {
+              color: '#9591ED'
+            }
+          },
+        ]
+      },
+      {
+        name: '1990',
+        itemStyle: {
+          color: '#FF9CA2'
+        },
+        children: [
+          {
+            name: '人类为他的四十五点五亿年的星球作的四十五个半陨石坑：为外星人作的计划第三号',
+            value: 1,
+            itemStyle: {
+              color: '#e73451'
+            }
+          },
+        ]
+      },
+      {
+        name: '1992',
+        itemStyle: {
+          color: '#9591ED'
+        },
+        children: [
+          {
+            name: '胎动二：为外星人作的计划第九号',
+            value: 1,
+            itemStyle: {
+              color: '#9591ED'
+            }
+          },
+        ]
+      },
+      {
+        name: '1993',
+        itemStyle: {
+          color: '#9591ED'
+        },
+        children: [
+          {
+            name: '万里长城延长一万米——为外星人做的计划第10号',
+            value: 1,
+            itemStyle: {
+              color: '#9591ED'
+            }
+          },
+        ]
+      },
+      {
+        name: '1994',
+        itemStyle: {
+          color: '#FFEF8F'
+        },
+        children: [
+          {
+            name: '地球也有黑洞：为外星人作的计划第十六号',
+            value: 1,
+            itemStyle: {
+              color: '#FFEF8F'
+            }
+          }
+        ]
+      },
+      {
+        name: '1996',
+        itemStyle: {
+          color: '#FF9CA2'
+        },
+        children: [
+          {
+            name: '有蘑菇云的世纪：为二十世纪作的计划-1',
+            value: 1,
+            itemStyle: {
+              color: '#FF9CA2'
+            }
+          },
+          {
+            name: '有蘑菇云的世纪：为二十世纪作的计划-2',
+            value: 1,
+            itemStyle: {
+              color: '#FF9CA2'
+            }
+          },
+          {
+            name: '有蘑菇云的世纪：为二十世纪作的计划-3',
+            value: 1,
+            itemStyle: {
+              color: '#FF9CA2'
+            }
+          }
+        ]
+      },
+      {
+        name: '1998',
+        itemStyle: {
+          color: '#9591ED'
+        },
+        children: [
+          {
+            name: '不破不立：引爆台湾省立美术馆',
+            value: 1,
+            itemStyle: {
+              color: '#9591ED'
+            }
+          },
+          {
+            name: '金飞弹',
+            value: 1,
+            itemStyle: {
+              color: '#9591ED'
+            }
+          }
+        ]
+      },
+      {
+        name: '2001',
+        itemStyle: {
+          color: '#FF9CA2'
+        },
+        children: [
+          {
+            name: 'APEC大型景观焰火表演',
+            value: 1,
+            itemStyle: {
+              color: '#FF9CA2'
+            }
+          }
+        ]
+      },
+      {
+        name: '2002',
+        itemStyle: {
+          color: '#FFEF8F'
+        },
+        children: [
+          {
+            name: '移动彩虹',
+            value: 1,
+            itemStyle: {
+              color: '#FFEF8F'
+            }
+          },
+          {
+            name: '空灵的花',
+            value: 1,
+            itemStyle: {
+              color: '#FFEF8F'
+            }
+          }
+        ]
+      },
+      {
+        name: '2003',
+        itemStyle: {
+          color: '#f7a128'
+        },
+        children: [
+          {
+            name: '叶公好龙：为泰德现代美术馆作的爆破计划',
+            value: 1,
+            itemStyle: {
+              color: '#f7a128'
+            }
+          }
+        ]
+      },
+      {
+        name: '2005',
+        itemStyle: {
+          color: '#9591ED'
+        },
+        children: [
+          {
+            name: '红旗',
+            value: 1,
+            itemStyle: {
+              color: '#9591ED'
+            }
+          },
+          {
+            name: '黑彩虹：瓦伦西亚爆破计划',
+            value: 1,
+            itemStyle: {
+              color: '#9591ED'
+            }
+          },
+          {
+            name: '龙卷风：为华盛顿中国文化节作的爆破计划',
+            value: 1,
+            itemStyle: {
+              color: '#9591ED'
+            }
+          }
+        ]
+      },
+      {
+        name: '2006',
+        itemStyle: {
+          color: '#FF9CA2'
+        },
+        children: [
+          {
+            name: '幻觉二：爆破计划',
+            value: 1,
+            itemStyle: {
+              color: '#FF9CA2'
+            }
+          },
+          {
+            name: '晴朗天空中的一朵黑云',
+            value: 1,
+            itemStyle: {
+              color: '#FF9CA2'
+            }
+          },
+        ]
+      },
+      {
+        name: '2008',
+        itemStyle: {
+          color: '#FFEF8F'
+        },
+        children: [
+          {
+            name: '历史足迹-为北京奥运会作的计划',
+            value: 1,
+            itemStyle: {
+              color: '#FFEF8F'
+            }
+          },
+          {
+            name: '第二十九届夏季奥林匹克运动会烟火',
+            value: 1,
+            itemStyle: {
+              color: '#FFEF8F'
+            }
+          },
+          {
+            name: '为2008年北京奥运开幕式作的焰火计划',
+            value: 1,
+            itemStyle: {
+              color: '#FFEF8F'
+            }
+          },
+        ]
+      },
+      {
+        name: '2009',
+        itemStyle: {
+          color: '#9591ED'
+        },
+        children: [
+          {
+            name: '中华人民共和国国庆60周年焰火',
+            value: 1,
+            itemStyle: {
+              color: '#9591ED'
+            }
+          },
+          {
+            name: '花开花落: 爆破计划',
+            value: 1,
+            itemStyle: {
+              color: '#9591ED'
+            }
+          },
+        ]
+      },
+      {
+        name: '2011',
+        itemStyle: {
+          color: '#FF9CA2'
+        },
+        children: [
+          {
+            name: '中华民国建国一百年跨年庆典跨年焰火',
+            value: 1,
+            itemStyle: {
+              color: '#FF9CA2'
+            }
+          },
+          {
+            name: '黑色仪式',
+            value: 1,
+            itemStyle: {
+              color: '#FF9CA2'
+            }
+          },
+        ]
+      },
+      {
+        name: '2012',
+        itemStyle: {
+          color: '#FFEF8F'
+        },
+        children: [
+          {
+            name: '黑色圣诞树：为华盛顿作的爆破计划',
+            value: 1,
+            itemStyle: {
+              color: '#FFEF8F'
+            }
+          },
+        ]
+      },
+      {
+        name: '2013',
+        itemStyle: {
+          color: '#9591ED'
+        },
+        children: [
+          {
+            name: '中华民国建国一百年跨年庆典跨年焰火',
+            value: 1,
+            itemStyle: {
+              color: '#9591ED'
+            }
+          },
+          {
+            name: '一夜情：为巴黎白夜艺术节作的爆破计划',
+            value: 1,
+            itemStyle: {
+              color: '#9591ED'
+            }
+          },
+        ]
+      },
+      {
+        name: '2014',
+        itemStyle: {
+          color: '#FF9CA2'
+        },
+        children: [
+          {
+            name: '挽歌',
+            value: 1,
+            itemStyle: {
+              color: '#FF9CA2'
+            }
+          },
+          {
+            name: '无题：为“蔡国强：九级浪”开幕所作的白天焰火项目',
+            value: 1,
+            itemStyle: {
+              color: '#FF9CA2'
+            }
+          },
+          {
+            name: '自然颂：APEC大型景观焰火表演花',
+            value: 1,
+            itemStyle: {
+              color: '#FF9CA2'
+            }
+          },
+        ]
+      },
+      {
+        name: '2015',
+        itemStyle: {
+          color: '#FFEF8F'
+        },
+        children: [
+          {
+            name: '天梯',
+            value: 1,
+            itemStyle: {
+              color: '#FFEF8F'
+            }
+          },
+        ]
+      },
+      {
+        name: '2018',
+        itemStyle: {
+          color: '#9591ED'
+        },
+        children: [
+          {
+            name: '空中花城',
+            value: 1,
+            itemStyle: {
+              color: '#9591ED'
+            }
+          },
+        ]
+      },
+      {
+        name: '2019',
+        itemStyle: {
+          color: '#9591ED'
+        },
+        children: [
+          {
+            name: '庆祝中华人民共和国成立70周年联欢活动焰火总设计',
+            value: 1,
+            itemStyle: {
+              color: '#9591ED'
+            }
+          },
+        ]
+      },
+      {
+        name: '2020',
+        itemStyle: {
+          color: '#FFEF8F'
+        },
+        children: [
+          {
+            name: '悲剧的诞生',
+            value: 1,
+            itemStyle: {
+              color: '#FFEF8F'
+            }
+          },
+        ]
+      },
+      {
+        name: '2021',
+        itemStyle: {
+          color: '#FF9CA2'
+        },
+        children: [
+          {
+            name: '瞬间的永恒——101个火药画的引爆',
+            value: 1,
+            itemStyle: {
+              color: '#FF9CA2'
+            }
+          },
+        ]
+      },
+      {
+        name: '2022',
+        itemStyle: {
+          color: '#FFEF8F'
+        },
+        children: [
+          {
+            name: '2022年卡塔尔世界杯闭幕式烟花表演',
+            value: 1,
+            itemStyle: {
+              color: '#FFEF8F'
+            }
+          },
+          {
+            name: '为2022年北京冬季奥林匹克运动会开幕烟花',
+            value: 1,
+            itemStyle: {
+              color: '#FFEF8F'
+            }
+          },
+        ]
+      },
+      {
+        name: '2023',
+        itemStyle: {
+          color: '#f7a128'
+        },
+        children: [
+          {
+            name: '海市蜃楼',
+            value: 1,
+            itemStyle: {
+              color: '#f7a128'
+            }
+          },
+        ]
+      },
+      {
+        name: 'Unknown',
+        itemStyle: {
+          color: '#EEE2D3'
+        },
+        children: [
+          {
+            name: '维也纳龙年观光巨型塔吊计划第32号',
+            value: 1,
+            itemStyle: {
+              color: '#EEE2D3'
+            }
+          },
+        ]
+      },
+    ]
+  },
+  {
+    name: '绘画 爆破',
+    itemStyle: {
+      color: '#FBAC56'
+    },
+    children: [
+      {
+        name: '1985',
+        itemStyle: {
+          color: '#FFEF8F'
+        },
+        children: [
+          {
+            name: '自画像：镇魂',
+            value: 1,
+            itemStyle: {
+              color:  '#FFEF8F'
+            }
+          },
+          {
+            name: '阴影、祈佑',
+            value: 1,
+            itemStyle: {
+              color:  '#FFEF8F'
+            }
+          }
+        ]
+      },
+      {
+        name: '1988',
+        itemStyle: {
+          color: '#FF9CA2'
+        },
+        children: [
+          {
+            name: '太古的烙印',
+            value: 1,
+            itemStyle: {
+              color: '#FF9CA2'
+            }
+          },
+          {
+            name: 'Solar Eclipse',
+            value: 1,
+            itemStyle: {
+              color: '#FF9CA2'
+            }
+          }
+        ]
+      },
+      {
+        name: '1989',
+        itemStyle: {
+          color: '#FFD94A'
+        },
+        children: [
+          {
+            name: '升龙：为外星人作的计划第二号',
+            value: 1,
+            itemStyle: {
+              color: '#FFD94A'
+            }
+          }
+        ]
+      },
+      {
+        name: '1990',
+        itemStyle: {
+          color: '#9591ED'
+        },
+        children: [
+          {
+            name: '天地悠悠',
+            value: 1,
+            itemStyle: {
+              color: '#9591ED'
+            }
+          },
+          {
+            name: 'Project for Extraterrestrials No.3: 45.5 Meteorite Craters',
+            value: 1,
+            itemStyle: {
+              color: '#9591ED'
+            }
+          }
+        ]
+      },
+      {
+        name: '1991',
+        itemStyle: {
+          color: '#FFEF8F'
+        },
+        children: [
+          {
+            name: '大脚印：为外星人作的计划第六号',
+            value: 1,
+            itemStyle: {
+              color: '#FFEF8F'
+            }
+          },
+          {
+            name: '原初火球：为计划作的计划',
+            value: 1,
+            itemStyle: {
+              color: '#FFEF8F'
+            }
+          }
+        ]
+      },
+      {
+        name: '1995',
+        itemStyle: {
+          color: '#FFEF8F'
+        },
+        children: [
+          {
+            name: '有蘑菇云的世纪：为二十世纪作的计划',
+            value: 1,
+            itemStyle: {
+              color: '#FFEF8F'
+            }
+          }
+        ]
+      },
+      {
+        name: '1998',
+        itemStyle: {
+          color: '#FF9CA2'
+        },
+        children: [
+          {
+            name: '圣经',
+            value: 1,
+            itemStyle: {
+              color: '#FF9CA2'
+            }
+          },
+          {
+            name: '金飞弹',
+            value: 1,
+            itemStyle: {
+              color: '#FF9CA2'
+            }
+          }
+        ]
+      },
+      {
+        name: '2002',
+        itemStyle: {
+          color: '#FFD94A'
+        },
+        children: [
+          {
+            name: '为“APEC景观焰火表演”所作草图',
+            value: 1,
+            itemStyle: {
+              color: '#FFD94A'
+            }
+          }
+        ]
+      },
+      {
+        name: '2003',
+        itemStyle: {
+          color: '#9591ED'
+        },
+        children: [
+          {
+            name: '人类、老鹰与天空之眼：放眼睛风筝的人们',
+            value: 1,
+            itemStyle: {
+              color: '#9591ED'
+            }
+          }
+        ]
+      },
+      {
+        name: '2004',
+        itemStyle: {
+          color: '#FF9CA2'
+        },
+        children: [
+          {
+            name: '蜘蛛网',
+            value: 1,
+            itemStyle: {
+              color: '#FF9CA2'
+            }
+          }
+        ]
+      },
+      {
+        name: '2007',
+        itemStyle: {
+          color: '#FFEF8F'
+        },
+        children: [
+          {
+            name: '松树与鹰',
+            value: 1,
+            itemStyle: {
+              color: '#FFEF8F'
+            }
+          }
+        ]
+      },
+      {
+        name: '2008',
+        itemStyle: {
+          color: '#FF9CA2'
+        },
+        children: [
+          {
+            name: '天安门上空的脚印',
+            value: 1,
+            itemStyle: {
+              color: '#FF9CA2'
+            }
+          }
+        ]
+      },
+      {
+        name: '2009',
+        itemStyle: {
+          color: '#FFEF8F'
+        },
+        children: [
+          {
+            name: '昼夜',
+            value: 1,
+            itemStyle: {
+              color: '#FFEF8F'
+            }
+          }
+        ]
+      },
+      {
+        name: '2013',
+        itemStyle: {
+          color: '#9591ED'
+        },
+        children: [
+          {
+            name: 'Homeland',
+            value: 1,
+            itemStyle: {
+              color: '#9591ED'
+            }
+          }
+        ]
+      },
+      {
+        name: '2015',
+        itemStyle: {
+          color: '#FF9CA2'
+        },
+        children: [
+          {
+            name: '罂粟系列：幻觉第一号',
+            value: 1,
+            itemStyle: {
+              color: '#FF9CA2'
+            }
+          },
+          {
+            name: '天梯',
+            value: 1,
+            itemStyle: {
+              color: '#FF9CA2'
+            }
+          },
+        ]
+      },
+      {
+        name: '2016',
+        itemStyle: {
+          color: '#FFEF8F'
+        },
+        children: [
+          {
+            name: '发情山',
+            value: 1,
+            itemStyle: {
+              color: '#FFEF8F'
+            }
+          }
+        ]
+      },
+      {
+        name: '2017',
+        itemStyle: {
+          color: '#9591ED'
+        },
+        children: [
+          {
+            name: '万国大厅',
+            value: 1,
+            itemStyle: {
+              color: '#9591ED'
+            }
+          },
+          {
+            name: '帕米拉',
+            value: 1,
+            itemStyle: {
+              color: '#9591ED'
+            }
+          },
+          {
+            name: '最后的狂欢',
+            value: 1,
+            itemStyle: {
+              color: '#9591ED'
+            }
+          },
+          {
+            name: 'Day and Night in Tledo',
+            value: 1,
+            itemStyle: {
+              color: '#9591ED'
+            }
+          }
+        ]
+      },
+      {
+        name: '2018',
+        itemStyle: {
+          color: '#FF9CA2'
+        },
+        children: [
+          {
+            name: '乌菲齐的研究：维纳斯第一号',
+            value: 1,
+            itemStyle: {
+              color: '#FF9CA2'
+            }
+          },
+          {
+            name: '鸟与鸟的手稿',
+            value: 1,
+            itemStyle: {
+              color: '#FF9CA2'
+            }
+          }
+        ]
+      },
+      {
+        name: '2020',
+        itemStyle: {
+          color: '#EEE2D3'
+        },
+        children: [
+          {
+            name: '人类的墓志铭：为外星人作的计划第十三号',
+            value: 1,
+            itemStyle: {
+              color: '#EEE2D3'
+            }
+          }
+        ]
+      },
+    ]
+  }
+];
+option = {
+  title: {
+    textStyle: {
+      fontSize: 14,
+      align: 'center'
+    },
+    subtextStyle: {
+      align: 'center'
+    },
+    sublink: 'https://worldcoffeeresearch.org/work/sensory-lexicon/'
+  },
+  series: {
+    type: 'sunburst',
+    data: data,
+    radius: [0, '95%'],
+    sort: undefined,
+    emphasis: {
+      focus: 'ancestor'
+    },
+    levels: [
+      {},
+      {
+        r0: '15',
+        r: '35%',
+        itemStyle: {
+          borderWidth: 1
+        },
+        label: {
+          rotate: 'tangential'
+        }
+      },
+      {
+        r0: '35%',
+        r: '70%',
+        label: {
+          align: 'right'
+        }
+      },
+      {
+        r0: '70%',
+        r: '72%',
+        label: {
+          position: 'outside',
+          padding: 5,
+          silent: false
+        },
+        itemStyle: {
+          borderWidth: 2
+        }
+      }
+    ]
+  }
+};
+
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+      
+    }
+
+    window.addEventListener('resize', myChart.resize);
+  </script>
+</body>
+</html>
