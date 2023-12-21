@@ -1,0 +1,449 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  
+
+
+
+  <meta charset="utf-8">
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+  <title>page1 timeline</title>
+
+  <link rel="stylesheet" media="screen" href="https://cpwebassets.codepen.io/assets/fullpage/fullpage-7d0085e88e3f06095d712efc55f79fc6aedaeed08967649de30e3ea674797898.css" />
+  
+
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+
+   
+
+
+  <title>CodePen - eee</title>
+
+  <style>
+    html { font-size: 15px; }
+    html, body { margin: 0; padding: 0; min-height: 100%; }
+    body { height:100%; display: flex; flex-direction: column; }
+    .referer-warning {
+      background: black;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+      padding: 0.75em;
+      color: white;
+      text-align: center;
+      font-family: 'Lato', 'Lucida Grande', 'Lucida Sans Unicode', Tahoma, system-ui, Sans-Serif;
+      line-height: 1.2;
+      font-size: 1rem;
+      position: relative;
+      z-index: 2;
+    }
+    
+  </style>
+</head>
+
+<body class="">
+
+  <div id="result-iframe-wrap" role="main">
+    <iframe
+      id="result"
+      srcdoc="<!DOCTYPE html>
+<html lang=&quot;en&quot; >
+
+<head>
+  <meta charset=&quot;UTF-8&quot;>
+  
+
+    <link rel=&quot;apple-touch-icon&quot; type=&quot;image/png&quot; href=&quot;https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png&quot; />
+
+    <meta name=&quot;apple-mobile-web-app-title&quot; content=&quot;CodePen&quot;>
+
+    <link rel=&quot;shortcut icon&quot; type=&quot;image/x-icon&quot; href=&quot;https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico&quot; />
+
+    <link rel=&quot;mask-icon&quot; type=&quot;image/x-icon&quot; href=&quot;https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg&quot; color=&quot;#111&quot; />
+
+
+
+  
+    <script src=&quot;https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js&quot;></script>
+
+
+  <title>CodePen - eee</title>
+
+    <link rel=&quot;canonical&quot; href=&quot;https://codepen.io/nili-the-flexboxer/pen/Exrqepp&quot;>
+  
+  <link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css&quot;>
+
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css'>
+  
+<style>
+body {
+  margin: 0;
+  background-color: #EEE2D3;
+  font-family: &quot;Roboto&quot;, sans-serif;
+}
+
+* {
+  outline: none;
+}
+
+.timeline-carousel {
+  padding: 86px 6.9444% 90px 6.9444%;
+  position: relative;
+  overflow: hidden;
+}
+.timeline-carousel:after, .timeline-carousel:before {
+  content: &quot;&quot;;
+  position: absolute;
+  display: block;
+  top: 80;
+  height: 100%;
+  width: 6.9444%;
+  background-color: #1d1d1e;
+  z-index: 3;
+  width: 0%;
+}
+.timeline-carousel:after {
+  left: 0;
+}
+.timeline-carousel:before {
+  right: 0;
+  opacity: 0;
+}
+.timeline-carousel .slick-list {
+  overflow: visible;
+}
+.timeline-carousel .slick-dots {
+  bottom: -10px;
+}
+.timeline-carousel h1 {
+  color: white;
+  font-size: 60px;
+  line-height: 50pd;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+.timeline-carousel__image {
+  padding-right: 100px;
+}
+.timeline-carousel__item {
+  cursor: pointer;
+}
+.timeline-carousel__item .media-wrapper {
+  opacity: 0.4;
+  padding-bottom: 71.4%;
+  -webkit-transition: all 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  -o-transition: all 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  transition: all 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
+.timeline-carousel__item:last-child .timeline-carousel__item-inner:after {
+  width: calc(100% - 80px);
+}
+.timeline-carousel__item-inner {
+  position: relative;
+  padding-top: 70px;
+}
+.timeline-carousel__item-inner:after {
+  position: absolute;
+  width: 100%;
+  top: 45px;
+  left: 0;
+  content: &quot;&quot;;
+  border-bottom: 5px solid rgba(255, 255, 255, 0.2);
+}
+.timeline-carousel__item-inner .year {
+  font-size: 36px;
+  line-height: 0px;
+  color: #102f43;
+  display: table;
+  letter-spacing: -1px;
+  padding-right: 10px;
+  background-color: #1d1d1e;
+  z-index: 1;
+  position: relative;
+  margin: -20px 0 30px;
+  font-weight: 500;
+}
+.timeline-carousel__item-inner .year:after {
+  content: &quot;&quot;;
+  position: absolute;
+  display: block;
+  left: -10px;
+  top: 0;
+  height: 100%;
+  width: 10px;
+  background-color: #1d1d1e;
+  z-index: 3;
+}
+.timeline-carousel__item-inner .month {
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #b38c52;
+  display: block;
+  margin-bottom: 15px;
+  font-weight: 900;
+}
+.timeline-carousel__item-inner p {
+  font-size: 12px;
+  line-height: 18px;
+  color: #102f43;
+  width: 60%;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+.timeline-carousel__item-inner .read-more {
+  font-size: 12px;
+  color: #b38c52;
+  display: table;
+  margin-bottom: 10px;
+  font-weight: 900;
+  text-decoration: none;
+  position: relative;
+}
+.timeline-carousel__item-inner .read-more:after {
+  content: &quot;&quot;;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 0;
+  border-bottom: 2px solid #b38c52;
+  -webkit-transition: all 0.2s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  -o-transition: all 0.2s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  transition: all 0.2s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
+.timeline-carousel__item-inner .read-more:hover:after {
+  width: 100%;
+}
+.timeline-carousel__item-inner .pointer {
+  height: 30px;
+  position: relative;
+  z-index: 1;
+  margin: -49px 0 16px;
+}
+.timeline-carousel__item-inner .pointer:after, .timeline-carousel__item-inner .pointer:before {
+  position: absolute;
+  content: &quot;&quot;;
+}
+.timeline-carousel__item-inner .pointer:after {
+  width: 9px;
+  height: 9px;
+  border-radius: 100%;
+  top: 0;
+  left: 0;
+  background-color: #b38c52;
+}
+.timeline-carousel__item-inner .pointer:before {
+  width: 1px;
+  height: 100%;
+  top: 0;
+  left: 4px;
+  background-color: #b38c52;
+}
+.timeline-carousel .slick-active .media-wrapper {
+  opacity: 1 !important;
+}
+
+.slick-dots {
+  bottom: 60px;
+  list-style: none;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  text-align: center;
+  z-index: 2;
+}
+.slick-dots li {
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 6px;
+  position: relative;
+  width: 10px;
+  height: 10px;
+}
+.slick-dots li:last-child {
+  margin-right: 0;
+}
+.slick-dots li.slick-active button {
+  background: #b38c52;
+  border-color: #b38c52;
+}
+.slick-dots li button {
+  display: block;
+  font-size: 0;
+  width: 10px;
+  height: 10px;
+  padding: 20;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  -webkit-transition: all 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  -o-transition: all 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  transition: all 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
+.slick-dots li button:hover {
+  background: #b38c52;
+  border-color: #b38c52;
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+</head>
+
+<body translate=&quot;no&quot;>
+  <!--Timeline carousel-->
+<section class=&quot;timeline-carousel&quot;>
+   <h1>History timeline</h1>
+   <div class=&quot;timeline-carousel__item-wrapper&quot; data-js=&quot;timeline-carousel&quot;>
+      <!--Timeline item-->
+      <div class=&quot;timeline-carousel__item&quot;>
+         <div class=&quot;timeline-carousel__image&quot;>
+            <div class=&quot;media-wrapper media-wrapper--overlay&quot; style=&quot;background: url(https://i.postimg.cc/mD2fTHMm/SMh09p-NCi-EDi-Vs-cuhgfgyslds.jpg) center center; background-size:cover;&quot;></div>
+         </div>
+         <div class=&quot;timeline-carousel__item-inner&quot;>
+            <span class=&quot;year&quot;>汉代</span>
+            <span class=&quot;month&quot;>“吐火”的幻术表演</span>
+            <p>汉代的百戏表演中已有“吞刀吐火”的节目,南北朝萧绮在录《拾遗记》时也引述《淮南子》说:“含雷吐火之术,出于万毕之家”(今本《淮南子》中此文已佚)。“含雷”描述的是爆竹的声音,“吐火”则描述了喷射的效果。这说明在汉代已经有了“吐火”的幻术,而这种“吐火”的幻术表演就是烟火的雏形。</p>
+            
+         </div>
+      </div>
+      <!--/Timeline item-->
+
+      <!--Timeline item-->
+
+      <div class=&quot;timeline-carousel__item&quot;>
+         <div class=&quot;timeline-carousel__image&quot;>
+            <div class=&quot;media-wrapper media-wrapper--overlay&quot; style=&quot;background: url(https://i.postimg.cc/DznRcXC7/10001.png) center center; background-size:cover;&quot;></div>
+         </div>
+         <div class=&quot;timeline-carousel__item-inner&quot;>
+            <span class=&quot;year&quot;>宋代</span>
+            <span class=&quot;month&quot;>“放五色烟火”</span>
+            <p> 宋代烟火生产技术和花色品类已经达到了相当的水平,如起轮、走线、流星、地老鼠等。据记载,北宋京都汴京(今开封)的李外宁以及南宋临安的陈太保、夏岛子等都是烟火设计和表演名师。烟火在当时已成为民间的娱乐商品,市场上有烟火作坊专门销售。 </p>
+         </div>
+      </div>
+      <!--/Timeline item-->
+
+      <!--Timeline item-->
+      <div class=&quot;timeline-carousel__item&quot;>
+         <div class=&quot;timeline-carousel__image&quot;>
+            <div class=&quot;media-wrapper media-wrapper--overlay&quot; style=&quot;background: url(https://i.postimg.cc/DwqtsgPC/10002.png) center center; background-size:cover;&quot;></div>
+         </div>
+         <div class=&quot;timeline-carousel__item-inner&quot;>
+            <div class=&quot;pointer&quot;></div>
+            <span class=&quot;month&quot;>南宋 </span>
+            <p>南宋吴自牧《梦梁录·十二月》中说:“街市扑卖锡打春幡胜……又有市爆仗,成架烟火之类。”宫廷中施放烟火的规模非常大,据周密《武林旧事·元夕》记载,上元节夜在宫中一次就要施放烟火百余架,南宋《西湖老人繁胜录》中记述了民间和宫廷“放五色烟火”的情形。 </p>
+            
+         </div>
+      </div>
+      <!--/Timeline item-->
+
+      <!--Timeline item-->
+      <div class=&quot;timeline-carousel__item&quot;>
+         <div class=&quot;timeline-carousel__image&quot;>
+            <div class=&quot;media-wrapper media-wrapper--overlay&quot; style=&quot;background: url('https://thechive.files.wordpress.com/2014/05/world-war-1-photography-30.jpg?quality=85&amp;strip=info&amp;w=550') center center; background-size:cover;&quot;></div>
+         </div>
+         <div class=&quot;timeline-carousel__item-inner&quot;>
+            <span class=&quot;year&quot;>元代</span>
+            <span class=&quot;month&quot;>“纷纷灿烂如星陨”</span>
+            <p> 到了元代，烟花的形式越来越发达，在节日上的应用也越来越精彩。这一时期，烟花不仅在本土的应用越发广泛，甚至还伴随着蒙古帝国的征服史远传海外。我国著名科学技术史大师潘吉星先生曾经考证过，在蒙古帝国四大汗国之一的伊尔汗国，有一本《马术的战争策略大全》（约公元1280年著），记载了很多烟花的名目，除了“茉莉花”“白睡莲”一类平常的名字，还有名叫“中国花”的烟花。 </p>
+            
+         </div>
+      </div>
+      <!--/Timeline item-->
+
+      <!--Timeline item-->
+
+      <div class=&quot;timeline-carousel__item&quot;>
+         <div class=&quot;timeline-carousel__image&quot;>
+            <div class=&quot;media-wrapper media-wrapper--overlay&quot; style=&quot;background: url(https://i.postimg.cc/KzqnH6x0/R-1.jpg) center center; background-size:cover;&quot;></div>
+         </div>
+         <div class=&quot;timeline-carousel__item-inner&quot;>
+            <span class=&quot;year&quot;>明代</span>
+            <span class=&quot;month&quot;>“天花无数月中开”</span>
+            <p> 明代的烟火业发展极为迅速。不仅烟火的种类繁多,其施放方法也丰富多彩。为了增加热闹的气氛,往往不再一个个地零星燃放,而进行扎架组合,将各种各样的花炮分组绑在木架上,再用火药线顺序连接起来,一经点燃,则连续放很长时间。《陶庵梦忆》记“鲁藩烟火”时说:“及放烟火,灯中景物又收为烟火中景物。天下之看灯者看灯灯外,看烟火烟火外,未有身入灯中、光中、影中、烟中、火中,闪烁变幻,不知其为王宫内之烟火,亦不知其为烟火内之王宫也。”可见精彩程度。
+            </p>
+            
+         </div>
+      </div>
+      <!--/Timeline item-->
+
+      <!--Timeline item-->
+      <div class=&quot;timeline-carousel__item&quot;>
+         <div class=&quot;timeline-carousel__image&quot;>
+            <div class=&quot;media-wrapper media-wrapper--overlay&quot; style=&quot;background: url(https://i.postimg.cc/7hfF2rK7/R.jpg) center center; background-size:cover;&quot;></div>
+         </div>
+         <div class=&quot;timeline-carousel__item-inner&quot;>
+            <div class=&quot;pointer&quot;></div>
+            <span class=&quot;month&quot;>明末</span>
+            <p>明末文学家张岱在其《陶庵梦忆·卷二》“鲁藩烟火”中则描绘了山东兖州燃放烟火的盛况,清代富察敦崇的《燕京岁时记》中则记载了北京元宵节赏灯放烟火的场面及烟火的种类,等等。这些资料中记载描述的烟火种类及燃放场面,均可谓奇妙绝伦、巧夺天工。 </p>
+            
+         </div>
+      </div>
+      <!--/Timeline item-->
+      <!--Timeline item-->
+      <div class=&quot;timeline-carousel__item&quot;>
+         <div class=&quot;timeline-carousel__image&quot;>
+            <div class=&quot;media-wrapper media-wrapper--overlay&quot; style=&quot;background: url(https://i.postimg.cc/Zn21PsQQ/2-DE4710-B0-E6-A6-E39-E1-A52-F1-CD6-DA7-A49-B8740301-size1772-w1076-h757.png) center center; background-size:cover;&quot;></div>
+         </div>
+         <div class=&quot;timeline-carousel__item-inner&quot;>
+            <span class=&quot;year&quot;>清代</span>
+            <span class=&quot;month&quot;>“放烟火,市肆张灯”</span>
+            <p> 清代的烟火品种更加丰富,烟火制造业进一步发展。《燕京岁时记》有关于烟火的记载:“每至灯节,内廷筵宴,放烟火,市肆张灯……花炮棚子制造各色烟火,竞巧争奇,有线穿牡丹、水浇莲、金盘落月、葡萄架、二踢脚、飞天十响、五鬼闹判儿、匣炮、天地灯等名目。清代烟火的施放方法除扎架组合外,还有“合器施放法”，并出现了记述烟花制作技术的专著——《火戏略》,详细介绍烟火的燃放原理、原料配制、制作技艺、操作程序等事项。 </p>
+            
+         </div>
+      </div>
+      <!--/Timeline item-->
+   </div>
+</section>
+<!--Timeline carousel-->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js'></script>
+      <script id=&quot;rendered-js&quot; >
+$.js = function (el) {
+  return $(&quot;[data-js=&quot; + el + &quot;]&quot;);
+};
+
+function carousel() {
+  $.js(&quot;timeline-carousel&quot;).slick({
+    infinite: false,
+    arrows: false,
+    dots: true,
+    autoplay: false,
+    speed: 1100,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    responsive: [
+    {
+      breakpoint: 800,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1 } }] });
+
+
+
+
+}
+
+carousel();
+//# sourceURL=pen.js
+    </script>
+
+  
+</body>
+
+</html>
+"
+      sandbox="allow-forms allow-modals allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-downloads allow-presentation" allow="accelerometer; ambient-light-sensor; camera; display-capture; encrypted-media; geolocation; gyroscope; microphone; midi; payment; vr; web-share" allowTransparency="true"
+      allowpaymentrequest="true" allowfullscreen="true" class="result-iframe">
+      </iframe>
+  </div>
+
+</body>
+
+</html>
